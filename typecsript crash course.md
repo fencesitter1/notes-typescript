@@ -1,3 +1,38 @@
+**目录**
+
+1. [视频链接](#%E8%A7%86%E9%A2%91%E9%93%BE%E6%8E%A5)
+1. [介绍与赞助 (UserIntro & Sponsor)](#%E4%BB%8B%E7%BB%8D%E4%B8%8E%E8%B5%9E%E5%8A%A9%20(UserIntro%20&%20Sponsor))
+1. [幻灯片 (Slides)](#%E5%B9%BB%E7%81%AF%E7%89%87%20(Slides))
+1. [TypeScript 设置 (TypeScript Setup)](#TypeScript%20%E8%AE%BE%E7%BD%AE%20(TypeScript%20Setup))
+1. [TSC(TSC - TypeScript Compiler)](#TSC(TSC%20-%20TypeScript%20Compiler))
+	1. [执行 ts 文件输出结果](#%E6%89%A7%E8%A1%8C%20ts%20%E6%96%87%E4%BB%B6%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C)
+1. [配置文件 (Config File)](#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%20(Config%20File))
+1. [文件夹结构 (Folder Structure)](#%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84%20(Folder%20Structure))
+1. [基本类型 (Basic Types)](#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%20(Basic%20Types))
+	1. [symbol](#symbol)
+	1. [BigInt](#BigInt)
+1. [数组与元组 (Arrays & Tuples)](#%E6%95%B0%E7%BB%84%E4%B8%8E%E5%85%83%E7%BB%84%20(Arrays%20&%20Tuples))
+1. [联合类型与枚举 (Unions & Enum)](#%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E4%B8%8E%E6%9E%9A%E4%B8%BE%20(Unions%20&%20Enum))
+	1. [enum](#enum)
+1. [对象 (Objects)](#%E5%AF%B9%E8%B1%A1%20(Objects))
+1. [类型断言 (Type Assertion)](#%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%20(Type%20Assertion))
+1. [函数 (Functions)](#%E5%87%BD%E6%95%B0%20(Functions))
+1. [接口 (Interfaces)](#%E6%8E%A5%E5%8F%A3%20(Interfaces))
+1. [函数接口 (Function Interface)](#%E5%87%BD%E6%95%B0%E6%8E%A5%E5%8F%A3%20(Function%20Interface))
+	1. [与 type 的区别](#%E4%B8%8E%20type%20%E7%9A%84%E5%8C%BA%E5%88%AB)
+		1. [1. **语法和用法:**](#1.%20**%E8%AF%AD%E6%B3%95%E5%92%8C%E7%94%A8%E6%B3%95:**)
+		1. [2. **合并接口或类型:**](#2.%20**%E5%90%88%E5%B9%B6%E6%8E%A5%E5%8F%A3%E6%88%96%E7%B1%BB%E5%9E%8B:**)
+		1. [3. **拓展（Extend）:**](#3.%20**%E6%8B%93%E5%B1%95%EF%BC%88Extend%EF%BC%89:**)
+		1. [4. **实现（Implement）:**](#4.%20**%E5%AE%9E%E7%8E%B0%EF%BC%88Implement%EF%BC%89:**)
+		1. [5. **可索引类型（Indexable Types）:**](#5.%20**%E5%8F%AF%E7%B4%A2%E5%BC%95%E7%B1%BB%E5%9E%8B%EF%BC%88Indexable%20Types%EF%BC%89:**)
+		1. [6. **兼容性:**](#6.%20**%E5%85%BC%E5%AE%B9%E6%80%A7:**)
+1. [类 (Classes)](#%E7%B1%BB%20(Classes))
+1. [类的访问修饰符 (Access Modifiers)](#%E7%B1%BB%E7%9A%84%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6%20(Access%20Modifiers))
+1. [在类中实现接口 (Implement Interface in Class)](#%E5%9C%A8%E7%B1%BB%E4%B8%AD%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3%20(Implement%20Interface%20in%20Class))
+1. [扩展类（子类） (Extending Classes - Subclasses)](#%E6%89%A9%E5%B1%95%E7%B1%BB%EF%BC%88%E5%AD%90%E7%B1%BB%EF%BC%89%20(Extending%20Classes%20-%20Subclasses))
+1. [泛型 (Generics)](#%E6%B3%9B%E5%9E%8B%20(Generics))
+1. [TypeScript 与 React (TypeScript With React)](#TypeScript%20%E4%B8%8E%20React%20(TypeScript%20With%20React))
+
 # 视频链接
 [tramvelsy](https://www.youtube.com/watch?v=BCg4U1FzODs&t=46s)
 # 介绍与赞助 (UserIntro & Sponsor)
@@ -234,7 +269,7 @@ const sub: MathFunc = (x: number, y: number): number => x - y;
 ```
 ## 与 type 的区别
 在 TypeScript 中，`interface` 和 `type` 都用于定义自定义类型，但它们之间有一些区别。下面是它们的主要区别：
-### 1. **语法和用法:**
+ 1. **语法和用法:**
 - **`interface`:**
   ```typescript
   interface Person {
@@ -251,7 +286,7 @@ const sub: MathFunc = (x: number, y: number): number => x - y;
   };
   ```
   `type` 用于声明联合类型、交叉类型，以及为现有类型起别名。
-### 2. **合并接口或类型:**
+ 2. **合并接口或类型:**
 - **`interface`:**
   如果你声明相同名称的两个接口，它们会自动合并成一个接口。
   ```typescript
@@ -277,7 +312,7 @@ const sub: MathFunc = (x: number, y: number): number => x - y;
     model: string; // Error: Duplicate identifier 'Car'.
   };
   ```
-### 3. **拓展（Extend）:**
+ 3. **拓展（Extend）:**
 - **`interface`:**
   `interface` 可以使用 `extends` 关键字拓展其他接口。
   ```typescript
@@ -298,7 +333,7 @@ const sub: MathFunc = (x: number, y: number): number => x - y;
 
   type Dog = Animal & { breed: string };
   ```
-### 4. **实现（Implement）:**
+ 4. **实现（Implement）:**
 - **`interface`:**
   `interface` 可以被类实现（implements）。
   ```typescript
@@ -312,7 +347,7 @@ const sub: MathFunc = (x: number, y: number): number => x - y;
   ```
 - **`type`:**
   `type` 不能被类实现。
-### 5. **可索引类型（Indexable Types）:**
+5. **可索引类型（Indexable Types）:**
 - **`interface`:**
   `interface` 支持可索引类型。
   ```typescript
@@ -327,7 +362,7 @@ const sub: MathFunc = (x: number, y: number): number => x - y;
     [index: number]: string;
   };
   ```
-### 6. **兼容性:**
+6. **兼容性:**
 - **`interface`:**
   `interface` 在兼容性检查方面更宽松，允许逐渐添加成员。
 - **`type`:**
@@ -380,6 +415,27 @@ const emp = new Employee(3, 'brad', 'developer');
 
 ```
 # 泛型 (Generics)
+在 TypeScript 中，泛型（Generics）是一种创建可重用组件的工具，这些组件可以在多种类型上工作，而不是单一的一种类型。泛型提供了一种方式，使得组件可以适应任何数据类型。
+
+泛型的基本语法是在函数名、类名或接口名后面加上 `<T>`，其中 `T` 是一个类型变量，它代表任何类型。在函数体、类体或接口体中，你可以像使用其他类型一样使用 `T`。
+
+以下是一个使用泛型的函数的例子：
+
+```typescript
+function identity<T>(arg: T): T {
+  return arg;
+}
+```
+
+在这个例子中，`identity` 是一个泛型函数，它接收一个类型为 `T` 的参数 `arg`，并返回一个类型为 `T` 的值。你可以用任何类型来调用 `identity` 函数，例如：
+
+```typescript
+let output = identity<string>("myString");  // type of output will be 'string'
+```
+
+在这个调用中，`T` 被指定为 `string`，所以 `arg` 的类型是 `string`，返回值的类型也是 `string`。
+
+泛型可以用于函数、类和接口，它们提供了一种灵活和可重用的方式来处理多种类型。
 ```ts
 // Generics
 function getArray<T>(items: T[]): T[] {
